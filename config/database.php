@@ -43,11 +43,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', $db_url["host"]),
+            'host' => env('DB_HOST'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', substr($db_url["path"], 1)),
-            'username' => env('DB_USERNAME', $db_url["user"]),
-            'password' => env('DB_PASSWORD', $db_url["pass"]),
+            'database' => env('DB_DATABASE','eventlocator'),
+            'username' => env('DB_USERNAME','admin'),
+            'password' => env('DB_PASSWORD','admin'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

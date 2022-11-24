@@ -87,7 +87,7 @@
 @section('bottom_scripts')
     <script>
       function initMap() {
-        var input = document.getElementById('location');
+        // var input = document.getElementById('location');
         var autocomplete = new google.maps.places.Autocomplete(input);
         autocomplete.setFields(
             ['address_components', 'geometry', 'icon', 'name']);
