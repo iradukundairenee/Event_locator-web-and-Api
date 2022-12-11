@@ -31,12 +31,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
+                        <!-- <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
                             <label for="location" class="col-md-4 control-label">Location</label>
 
                             <div class="col-md-6">
                                 <input id="location" type="location" class="form-control geocomplete" name="location" value="{{ old('location') }}" value="{{ old('location') }}" placeholder="Location ..." required>
-
                                 @if (($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')))
                                     <span class="help-block">
                                         <strong>Please select valid location by choosing from the dropdown addresses (Start by typing an event address)</strong>
@@ -51,7 +50,7 @@
 	  							<input name="state" type="hidden" id="state" value="">
 	  							<input name="country" type="hidden" id="country" value="">
   							</span>
-                        </div>
+                        </div> -->
 
                         <div class="form-group{{ $errors->has('host') ? ' has-error' : '' }}">
                             <label for="host" class="col-md-4 control-label">Host</label>
@@ -87,12 +86,11 @@
 @section('bottom_scripts')
     <script>
       function initMap() {
-        // var input = document.getElementById('location');
-        var autocomplete = new google.maps.places.Autocomplete(input);
+        let  autocomplete = new google.maps.places.Autocomplete(input);
         autocomplete.setFields(
             ['address_components', 'geometry', 'icon', 'name']);
         autocomplete.addListener('place_changed', function() {
-          var place = autocomplete.getPlace();
+          let  place = autocomplete.getPlace();
           $.each(place.address_components, function( index, value ) {
             if(value.types.indexOf('locality') !== -1 || value.types.indexOf('sublocality') !== -1){
                 $('.location_details input#locality').val(value.long_name);
@@ -114,8 +112,7 @@
         });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3FHQ-gE5NeiJfug9NQVVB3QZqRyUwhUg&libraries=places&callback=initMap"
-        async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYBKBV8IK6WRgy5a4EQO495SZ5KoCL114&callback=initMap"></script>
     
     <script src="{{ asset('js/moment.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
