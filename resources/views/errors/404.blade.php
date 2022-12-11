@@ -74,8 +74,7 @@
                     Ooops! <br/>You have been lost my dear.<br/>
                 </div>
                 <div>
-                    <h1><a href="https://github.com/muhozi"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/EmeryMuhozi"><i class="fa fa-twitter"></i></a></h1>
-
+                    <h1><a href="https://github.com/iradukundairenee/iradukundairenee"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-twitter"></i></a></h1>
                 </div>
             </div>
 
