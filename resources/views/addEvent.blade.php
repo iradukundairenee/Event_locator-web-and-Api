@@ -31,7 +31,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
+                        <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
                             <label for="location" class="col-md-4 control-label">Location</label>
 
                             <div class="col-md-6">
@@ -42,16 +42,32 @@
                                     </span>
                                 @endif
                             </div>
-                            <span class="location_details">
-								<input name="lat" type="hidden" id="lat" value="">
-	  							<input name="lng" type="hidden" id="lng" value="">
+
+                            </div>
+
+
+                            <div class="form-group{{ $errors->has('lat')  ? ' has-error' : '' }}">
+                            <label for="location" class="col-md-4 control-label">latitude</label>
+                            <div class="col-md-6">
+                            <input name="lat" class="form-control geocomplete"   id="lat" value="">
+</div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('lng') ? ' has-error' : '' }}">
+                            <label for="location" class="col-md-4 control-label">Longitude</label>
+                            <div class="col-md-6">
+                            <input name="lng" class="form-control geocomplete"  type="text" id="lng" value="">
+</div>
+                            </div>
+                            <!-- <span class="location_details">
+
 	  							<input name="formatted_address" id="formatted_address" type="hidden" value="">
 	  							<input name="locality" id="locality" type="hidden" value="">
 	  							<input name="state" type="hidden" id="state" value="">
 	  							<input name="country" type="hidden" id="country" value="">
-  							</span>
-                        </div> -->
-
+  							</span> -->
+                        <!-- </div> -->
+             
                         <div class="form-group{{ $errors->has('host') ? ' has-error' : '' }}">
                             <label for="host" class="col-md-4 control-label">Host</label>
 

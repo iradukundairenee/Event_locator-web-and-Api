@@ -21,7 +21,7 @@ class HomeController extends Controller
     public function index()
     {
         $mevents = Events::whereMonth('date','=',date('m',time()))->get();
-        $events = Events::whereNotIn('id',$mevents)->orderBy('date','desc')->get();
+        $events = Events::whereNotIn('id',[$mevents])->orderBy('date','desc')->get();
         return view('home')->with('mevents',$mevents)->with('events',$events);
     }
     public function getApp(){

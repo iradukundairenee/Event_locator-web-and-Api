@@ -16,3 +16,5 @@ Route::get('/events','ApiController@events');
 Route::get('/events/{id}','ApiController@event');
 Route::post('/comment/{id}', 'ApiController@comment');
 Route::post('/reserve/{id}','ApiController@reserve');
+
+

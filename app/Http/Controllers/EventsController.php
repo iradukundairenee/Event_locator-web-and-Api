@@ -25,7 +25,6 @@ class EventsController extends Controller
                 'title'=>'required|min:6',
                 'description'=>'required|min:6',
                 'host'=>'required',
-                'formatted_address'=>'required',
                 'lat'=>'required',
                 'lng'=>'required',
             ]);
@@ -38,10 +37,10 @@ class EventsController extends Controller
     	$event->description = $request->input('description');
     	$event->host = $request->input('host');
     	$event->user_id = Auth::user()->id;
-    	$event->formatted_address = $request->input('formatted_address');
-    	$event->locality = $request->input('locality');
-    	$event->state = $request->input('state');
-    	$event->country = $request->input('country');
+    	$event->formatted_address = "weoeoeoeoeoeoeo";
+    	$event->locality = "ooooo";
+    	$event->state = "W";
+    	$event->country = "Rwanda";
     	$event->lng = $request->input('lng');
     	$event->lat = $request->input('lat');
     	$event->administrative_area_level_1 = $request->input('administrative_area_level_1');

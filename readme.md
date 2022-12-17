@@ -5,8 +5,6 @@ This is a simple web application and API for events locator. It is built using  
 - Web based
 - REST API
 
-It is built using laravel. Check out client android application **[Here](https://github.com/muhozi/EventLocator)**
-
 ## Requirements
 
 - PHP, Composer
@@ -69,7 +67,6 @@ Run the application using the following command:
 
 ## Authors
 
-[Emery Muhozi](https://twitter.com/EmeryMuhozi)
 
 ## Licence
 
