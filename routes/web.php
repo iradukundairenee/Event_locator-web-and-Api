@@ -18,6 +18,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/newevent', 'EventsController@showEventForm')->name('addEvent');
 	Route::post('/newevent', 'EventsController@saveEvent');
 	Route::get('/events', 'EventsController@index')->name('events');
+	Route::get('/statistics', 'DashboardController@index')->name('statistics');
 	Route::get('/events/{id}', 'EventsController@singleEvent')->name('singleEvent');
 	Route::get('/events/delete/{id}','EventsController@deleteEvent')->name('deleteEvent');
 	Route::get('/events/edit/{id}','EventsController@editEvent')->name('editEvent');

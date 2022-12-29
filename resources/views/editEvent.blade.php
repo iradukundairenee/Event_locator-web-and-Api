@@ -30,8 +30,23 @@
                                 @endif
                             </div>
                         </div>
+                
 
-                        <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('lat')  ? ' has-error' : '' }}">
+                            <label for="location" class="col-md-4 control-label">latitude</label>
+                            <div class="col-md-6">
+                            <input name="lat" class="form-control geocomplete" type="number"   id="lat" value="{{(old('lat'))?old('lat'):$event->lat }}">
+                              </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('lng') ? ' has-error' : '' }}">
+                            <label for="location" class="col-md-4 control-label">Longitude</label>
+                            <div class="col-md-6">
+                            <input name="lng" class="form-control geocomplete"  type="number" id="lng" value="{{(old('lng'))?old('lng'):$event->lng }}">
+</div>
+                            </div>
+
+                         <div class="form-group{{ ($errors->has('formatted_address') || $errors->has('lat') || $errors->has('lng')) ? ' has-error' : '' }}">
                             <label for="location" class="col-md-4 control-label">Location</label>
 
                             <div class="col-md-6">

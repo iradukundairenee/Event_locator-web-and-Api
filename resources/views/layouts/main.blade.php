@@ -16,7 +16,10 @@
           </button>      
         </div>
         <div class="collapse navbar-collapse" id="left-menus">
-          <ul class="nav navbar-nav">      
+          <ul class="nav navbar-nav">   
+          <!-- <li>
+              <a href="#">Dashboard</a>
+            </li>    -->
             <li {!! (Route::currentRouteName()=='addEvent')?'class="active"':'' !!}>
               <a href="{{url('newevent')}}">Add Event</a>
             </li>        

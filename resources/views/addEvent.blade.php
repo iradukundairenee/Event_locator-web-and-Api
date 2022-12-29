@@ -1,6 +1,8 @@
 @extends('layouts.main')
 @section('title') Add event @stop
 @section('body') 
+
+
  <form class="form-horizontal" role="form" method="POST" action="{{ url('newevent') }}">
                         {{ csrf_field() }}
                         {!! (session()->has('message')?'<p class="text-center text-success">'.session()->get('message').'</p>':'') !!}
@@ -44,7 +46,7 @@
                             </div>
 
                             </div>
-
+                       
 
                             <div class="form-group{{ $errors->has('lat')  ? ' has-error' : '' }}">
                             <label for="location" class="col-md-4 control-label">latitude</label>

@@ -21,16 +21,17 @@ class EventsController extends Controller
     	return view('addEvent');
     }
     public function saveEvent(Request $request){
-        $validate = \Validator::make($request->all(),[
-                'title'=>'required|min:6',
-                'description'=>'required|min:6',
-                'host'=>'required',
-                'lat'=>'required',
-                'lng'=>'required',
-            ]);
-        if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate->errors())->withInput();
-        }
+        // $validate = \Validator::make($request->all(),[
+        //         'title'=>'required|min:6',
+        //         'lat'=>'required',
+        //         'lng'=>'required',
+        //         'host'=>'required',
+        //         'description'=>'required|min:6',
+        //     ]);
+        // if ($validate->fails()) {
+        //     return back()->withErrors($validate)->withInput();
+        //     //return redirect()->back()->withErrors($validate->errors())->withInput();
+        // }
     	$event = new Events();
     	$event->title = $request->input('title');
     	$event->date = $request->input('date').':00'; //Appends 00(seconds), to match Valid date string to work with date string
